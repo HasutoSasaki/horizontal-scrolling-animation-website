@@ -1,0 +1,78 @@
+body {
+    height: 1000vh;
+}
+
+.home__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.home__body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.home__body__title__primary {
+    display: block;
+    /* スクロールアニメーションの設定 */
+    animation: titlePrimary-fadeOut linear;
+    /* アニメーションを指定。イージングはlinear */
+    animation-timeline: scroll();
+}
+
+@keyframes titlePrimary-fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+
+    }
+
+    32% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.home__body__title__secondary {
+    visibility: hidden;
+    animation: titleSecondary-fadeIn linear;
+    animation-timeline: scroll();
+}
+
+@keyframes titleSecondary-fadeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    30% {
+        transform: translate(10px, 40px);
+        visibility: visible;
+        opacity: 0;
+    }
+
+    34% {
+        transform: translate(-30px, -40px);
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+}
+
+.home__body__title__tertiary {
+    display: none;
+}
