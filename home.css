@@ -1,0 +1,194 @@
+body {
+    height: 1000vh;
+    width: 100vw;
+}
+
+.home__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.home__body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.home__body__title {
+    position: relative;
+}
+
+.home__body__title h2 {
+    font-size: 32px;
+    line-height: 1.5em;
+    font-feature-settings: "palt";
+    letter-spacing: 8px;
+}
+
+.home__body__title h3 {
+    font-size: 24px;
+    line-height: 1.5em;
+    font-feature-settings: "palt";
+    letter-spacing: 5px;
+}
+
+.home__body__title__primary {
+    visibility: hidden;
+    position: absolute;
+    /* スクロールアニメーションの設定 */
+    animation: titlePrimary-fadeOut linear;
+    /* アニメーションを指定。イージングはlinear */
+    animation-timeline: scroll();
+    animation-range: 0vh 100vh;
+}
+
+.home__body__title__primary span {
+    display: block;
+}
+
+@keyframes titlePrimary-fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+        visibility: hidden;
+    }
+}
+
+.home__body__title__secondary {
+    visibility: hidden;
+    position: absolute;
+    animation: titleSecondary-fadeIn linear;
+    animation-timeline: scroll();
+    animation-range: 100vh 200vh;
+}
+
+.home__body__title__secondary span {
+    display: block;
+}
+
+@keyframes titleSecondary-fadeIn {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(10px, 40px);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    80% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-30px, -40px);
+        opacity: 0;
+    }
+}
+
+.home__body__title__tertiary {
+    visibility: hidden;
+    /* position: absolute; */
+    animation: titleTertiary-fadeIn linear;
+    animation-timeline: scroll();
+    animation-range: 200vh 300vh;
+}
+
+.home__body__title__tertiary span {
+    display: block;
+}
+
+@keyframes titleTertiary-fadeIn {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        transform: translate(20px 20px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(0px 0px);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-30px, -40px);
+        opacity: 0;
+    }
+}
+
+.history-section {
+    width: 100vw;
+}
+
+.history-section__list {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: fit-content;
+    overflow: hidden;
+    transform: translateX(100vw);
+    animation: history-section__listFadeIn linear;
+    animation-timeline: scroll();
+    animation-range: 290vh 600vh;
+}
+
+@keyframes history-section__listFadeIn {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(-200vw);
+    }
+}
+
+.history-section__list img {
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+.history-section__item {
+    /* width: 53vw; */
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+}
+
+.history-section__item dl {
+    width: 25vw;
+    margin-left: 40px;
+}
+
+.history-section__item dt {
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+}
+
+.history-section__item dl {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.3em;
+}
