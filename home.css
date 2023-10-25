@@ -16,8 +16,27 @@ body {
     position: fixed;
 }
 
+.home__body__title {
+    position: relative;
+}
+
+.home__body__title h2 {
+    font-size: 32px;
+    line-height: 1.5em;
+    font-feature-settings: "palt";
+    letter-spacing: 8px;
+}
+
+.home__body__title h3 {
+    font-size: 24px;
+    line-height: 1.5em;
+    font-feature-settings: "palt";
+    letter-spacing: 5px;
+}
+
 .home__body__title__primary {
     visibility: hidden;
+    position: absolute;
     /* スクロールアニメーションの設定 */
     animation: titlePrimary-fadeOut linear;
     /* アニメーションを指定。イージングはlinear */
@@ -39,7 +58,6 @@ body {
         opacity: 1;
         transform: translate(0px, 0px);
         visibility: visible;
-
     }
 
     100% {
@@ -51,6 +69,7 @@ body {
 
 .home__body__title__secondary {
     visibility: hidden;
+    position: absolute;
     animation: titleSecondary-fadeIn linear;
     animation-timeline: scroll();
     animation-range: 100vh 200vh;
@@ -85,6 +104,7 @@ body {
 
 .home__body__title__tertiary {
     visibility: hidden;
+    /* position: absolute; */
     animation: titleTertiary-fadeIn linear;
     animation-timeline: scroll();
     animation-range: 200vh 300vh;
