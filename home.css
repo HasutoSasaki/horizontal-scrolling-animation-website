@@ -16,8 +16,13 @@ body {
     position: fixed;
 }
 
+.home__body__canvas {
+    width: 50%;
+}
+
 .home__body__title {
     position: relative;
+    margin-left: 50px;
 }
 
 .home__body__title h2 {
